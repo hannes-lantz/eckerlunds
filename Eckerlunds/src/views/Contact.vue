@@ -5,13 +5,7 @@
       <h1>Kontakt</h1>
       <form @submit.prevent="submitForm">
         <div class="form-group">
-          <input
-            type="text"
-            id="name"
-            v-model="formData.name"
-            placeholder="Ditt namn"
-            required
-          />
+          <input type="text" id="name" v-model="formData.name" placeholder="Ditt namn" required />
         </div>
 
         <div class="form-group">
@@ -50,8 +44,8 @@
 </template>
 
 <script>
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import 'leaflet/dist/leaflet.css'
+import L from 'leaflet'
 export default {
   data() {
     return {
@@ -61,23 +55,21 @@ export default {
         email: '',
         message: ''
       }
-    };
+    }
   },
   mounted() {
     // Initialize the Leaflet map
-    this.map = L.map(this.$refs.map).setView([55.7105, 13.21], 17);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(
-      this.map
-    );
+    this.map = L.map(this.$refs.map).setView([55.7105, 13.21], 17)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map)
   },
   methods: {
     submitForm() {
       // Handle form submission logic here
-      console.log('Form submitted with data:', this.formData);
+      console.log('Form submitted with data:', this.formData)
       // You can add additional logic to handle form submission, e.g., sending data to a server
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -108,6 +100,11 @@ export default {
   margin-right: 3%;
 }
 
+.contactform h1 {
+  color: #7f4909;
+  margin-bottom: 3%;
+}
+
 form {
   display: grid;
   gap: 10px;
@@ -116,6 +113,13 @@ form {
 .form-group {
   display: grid;
   gap: 5px;
+}
+
+.form-group input {
+  border: none;
+  border-bottom: 1px solid #464545;
+  outline: none;
+  background: transparent; /* Remove input background */
 }
 
 label {
@@ -129,7 +133,7 @@ textarea {
   max-width: 100%; /* Adjust max-width as needed */
   padding: 8px;
   box-sizing: border-box;
-  border: 1px solid #e8be8c;
+  border: 1px solid #464545;
   resize: vertical; /* Allow vertical resizing */
 }
 

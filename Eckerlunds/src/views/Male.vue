@@ -2,138 +2,70 @@
   <div class="content">
     <div class="carousel">
       <div class="carousel-inner">
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
         </div>
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
         </div>
       </div>
+
       <div class="carousel-inner reverse">
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
         </div>
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
         </div>
       </div>
+
       <div class="carousel-inner">
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
         </div>
-        <div
-          class="brands"
-          v-for="(container, containerIndex) in containers"
-          :key="containerIndex"
-        >
-          <template v-for="logo in container.logos">
-            <img :src="logo" alt="Brand Logo" :style="{ width: logoWidth }" />
-          </template>
+        <div class="brands">
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      logos: [],
-      containers: [{ logos: [] }, { logos: [] }, { logos: [] }],
-      logoWidth: '10vw',
-      containerWidth: 0
-    };
-  },
-  mounted() {
-    this.loadLogos();
-  },
-  methods: {
-    loadLogos() {
-      const logosContext = require.context(
-        '@/assets/brands/male',
-        false,
-        /\.(png|jpe?g|svg)$/
-      );
-      this.logos = logosContext.keys().map(key => logosContext(key));
-
-      this.containers.forEach(container => {
-        container.logos = [...this.logos];
-        this.shuffleArrayWithConstraint(container.logos, 3);
-      });
-    },
-    shuffleArrayWithConstraint(array, constraint) {
-      // Function to shuffle an array using Fisher-Yates algorithm with constraint on name
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-
-        // Check and swap until the constraint is satisfied
-        let k = i;
-        let attempts = 0;
-        while (
-          k + constraint >= array.length &&
-          attempts < 10 &&
-          this.hasAdjacentSameName(array, k, constraint)
-        ) {
-          [array[k], array[j]] = [array[j], array[k]];
-          k--;
-          attempts++;
-        }
-      }
-    },
-    // Function to check if there is the same name in the adjacent indexes
-    hasAdjacentSameName(array, currentIndex, constraint) {
-      const currentName = array[currentIndex]; // Assuming your logo objects have a 'name' property
-      for (let offset = 1; offset <= constraint; offset++) {
-        if (
-          currentIndex + offset < array.length &&
-          array[currentIndex + offset] === currentName
-        ) {
-          return true; // Same name found in the positive direction
-        }
-        if (
-          currentIndex - offset >= 0 &&
-          array[currentIndex - offset] === currentName
-        ) {
-          return true; // Same name found in the negative direction
-        }
-      }
-      return false; // No same name found in adjacent indexes
-    }
-  }
-};
-</script>
 
 <style scoped>
 .content {
@@ -145,6 +77,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: auto;
 }
 
 .carousel {
@@ -168,6 +101,7 @@ export default {
 
 .carousel-inner.reverse {
   animation-direction: reverse;
+  height: 100px;
 }
 
 .brands {
@@ -178,7 +112,7 @@ export default {
 }
 
 .brands img {
-  width: var(--logo-width);
+  width: 100px;
 }
 
 @keyframes slide {

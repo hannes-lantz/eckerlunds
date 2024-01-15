@@ -3,40 +3,37 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <script>
-  import Home from './views/Home.vue';
-  import History from './views/History.vue';
-  import Male from './views/Male.vue';
-  import Female from './views/Female.vue';
-  import Contact from './views/Contact.vue';
+import Home from './views/Home.vue'
+import History from './views/History.vue'
+import Male from './views/Male.vue'
+import Female from './views/Female.vue'
+import Contact from './views/Contact.vue'
 
-  export default {
-    components: {
-      Home,
-      History,
-      Male,
-      Female,
-      Contact,
-    },
-  };
+export default {
+  components: {
+    Home,
+    History,
+    Male,
+    Female,
+    Contact
+  }
+}
 </script>
-
-
 
 <template>
   <header>
     <nav class="navbar">
-    <div class="navbar-menu">
-      <div class="navbar-start">
-        <router-link to="/" class="navbar-item">Hem</router-link>
-        <router-link to="/history" class="navbar-item">Historia</router-link>
-        <router-link to="/male" class="navbar-item">För Honom</router-link>
-        <router-link to="/female" class="navbar-item">För Henne</router-link>
-        <router-link to="/contact" class="navbar-item">Kontakt</router-link>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <router-link to="/" class="navbar-item">Hem</router-link>
+          <router-link to="/history" class="navbar-item">Historia</router-link>
+          <router-link to="/male" class="navbar-item">För Honom</router-link>
+          <router-link to="/female" class="navbar-item">För Henne</router-link>
+          <router-link to="/contact" class="navbar-item">Kontakt</router-link>
+        </div>
+        <div class="navbar-end"></div>
       </div>
-      <div class="navbar-end">
-      </div>
-    </div>
-  </nav>
+    </nav>
   </header>
 
   <RouterView />
@@ -46,11 +43,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="footer-info">
         <div class="logo">
           <router-link to="/">
-            <img
-              src="@/assets/logo.png"
-              class="logo"
-              alt="ECKERLUNDS kläder logo"
-            />
+            <img src="@/assets/logo.png" class="logo" alt="ECKERLUNDS kläder logo" />
           </router-link>
         </div>
         <br />
@@ -85,6 +78,12 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .navbar {
   position: fixed;
   top: -2rem;
@@ -98,13 +97,13 @@ import { RouterLink, RouterView } from 'vue-router'
 
 .navbar-item {
   color: white;
-  margin-right: 15px; 
-  text-decoration: none; 
-  transition: color 0.3s ease; 
+  margin-right: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar-item:hover {
-  color: #ffd700; 
+  color: #ffd700;
 }
 nav {
   width: 100%;
@@ -126,13 +125,11 @@ nav a.router-link-exact-active {
   width: 100vw;
 }
 
-
 .footer-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 
 .footer-info,
 .contact-us,
@@ -163,11 +160,11 @@ nav a.router-link-exact-active:hover {
   }
 
   .logo {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   header {
     display: flex;
@@ -184,39 +181,35 @@ nav a.router-link-exact-active:hover {
   }
 
   .footer {
-  background-color: #7f4909;
-  color: #fff;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: start;
-  width: 100vw;
-}
+    background-color: #7f4909;
+    color: #fff;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: start;
+    width: 100vw;
+  }
 
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  
-}
+  .footer-info,
+  .contact-us,
+  .social-media {
+    width: 25%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 0;
+  }
 
-
-.footer-info,
-.contact-us,
-.social-media {
-  width: 25%;
-  max-width: 300px;
-  margin: 10px;
-  padding: 0;
-}
-
-.contact-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
+  .contact-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 </style>
