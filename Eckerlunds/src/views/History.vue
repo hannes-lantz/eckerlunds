@@ -49,39 +49,53 @@
 <script></script>
 
 <style scoped>
+/* Common styles for all screen sizes */
 h1 {
   color: #e8be8c;
 }
+
 .content {
   color: #e8be8c;
-  height: auto;
   margin: 5% 0 2% 0;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 .img {
-  margin: 35% 0 0 20%;
-  max-width: 100%;
+  margin: 0; /* Adjust margin for mobile */
 }
 
 .img img {
-  width: 60%;
+  width: 100%; /* Make the image take 100% of the container width */
   height: auto;
   max-width: 100%;
 }
 
 .text {
   margin-top: 5%;
-  margin-right: 25%;
   text-align: start;
   font-size: 12px;
   color: black;
-  max-width: 100%; /* Ensure text doesn't exceed its container's width */
+  max-width: 100%;
 }
 
 .text p {
   margin-top: 2%;
+}
+
+/* Media queries for larger screens */
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: auto 1fr;
+  }
+
+  .img {
+    margin: 35% 0 0 20%;
+  }
+
+  .text {
+    margin-right: 25%;
+  }
 }
 </style>

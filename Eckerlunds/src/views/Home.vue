@@ -78,7 +78,7 @@ a {
 }
 
 .default_page {
-  margin-top: 5%;
+  margin-top: 3%;
   width: 100vw;
   height: 100vh;
   display: flex;

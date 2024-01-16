@@ -79,16 +79,18 @@ export default {
 </template>
 
 <style scoped>
+/* Common styles for all screen sizes */
 .logo {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
+
 .navbar {
   position: fixed;
-  top: -2rem;
-  left: 0; /* Ensure it starts from the left edge */
+  top: 0rem;
+  left: 0;
   width: 100%;
   background-color: #7f4909;
   padding: 1rem;
@@ -106,15 +108,11 @@ export default {
 .navbar-item:hover {
   color: #ffd700;
 }
+
 nav {
   width: 100%;
   font-size: 16px;
   text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
 }
 
 .footer {
@@ -128,30 +126,28 @@ nav a.router-link-exact-active {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-info,
 .contact-us,
 .social-media {
-  width: 25%;
+  width: 100%;
   max-width: 300px;
   margin: 10px;
   padding: 0;
 }
 
 .social-media-icons {
-    width: 25%;
-    height: 10%;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .social-media-icons a {
-    width: 100%;
-    height: 100%;
-  }
+  width: 50%;
+  height: 100%;
+}
 
 .contact-link {
   color: #fff;
@@ -162,76 +158,31 @@ nav a.router-link-exact-active {
   margin-bottom: 5px;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-@media (min-width: 1024px) {
+/* Media queries for larger screens */
+@media (min-width: 768px) {
   header {
     display: flex;
     place-items: center;
   }
 
-  .logo {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  header {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
   nav {
     font-size: 1rem;
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .footer {
-    background-color: #7f4909;
-    color: #fff;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: start;
-    width: 100vw;
-  }
-
-  .footer h1, h2, h3, strong{
-    font-weight: bold;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
+    margin-top: 0;
   }
 
   .footer-info,
   .contact-us,
   .social-media {
-    width: 25%;
-    max-width: 300px;
-    margin: 10px;
-    padding: 0;
+    width: 30%;
+    max-width: none;
   }
 
+  .social-media-icons a {
+    width: 15%;
+  }
   .social-media-icons a svg {
-    width: 50%;
-    height: 100%;
-  }
-
-  .contact-link {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 100%;
+    height: auto;
   }
 }
 </style>

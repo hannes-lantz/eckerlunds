@@ -78,31 +78,32 @@ export default {
   height: auto;
   margin: 8% 0 3% 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Change to a column layout for mobile screens */
   gap: 3%;
 }
 
 .map {
-  height: auto; /* Make sure the map takes the full height of its container */
+  height: 300px; /* Set a fixed height for the map on mobile screens */
   border: 1px solid #464545;
-  overflow: hidden; /* Hide overflow for a cleaner look */
-  width: 48%; /* Adjust the width as needed */
-  margin-left: 3%;
+  overflow: hidden;
+  width: 100%; /* Take full width on mobile */
+  margin-top: 3%; /* Add margin at the top for separation */
+  margin-bottom: 3%; /* Add margin at the bottom for separation */
   position: relative;
-
   z-index: 10;
 }
 
 .contactform {
   padding: 20px;
   border: 1px solid #464545;
-  width: 48%; /* Adjust the width as needed */
-  margin-right: 3%;
+  width: 100%; /* Take full width on mobile */
 }
 
+/* Additional styles for h1 on mobile screens */
 .contactform h1 {
   color: #7f4909;
   margin-bottom: 3%;
+  text-align: center; /* Center the heading on mobile */
 }
 
 form {
@@ -115,26 +116,26 @@ form {
   gap: 5px;
 }
 
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Take full width on mobile */
+}
+
 .form-group input {
   border: none;
   border-bottom: 1px solid #464545;
   outline: none;
-  background: transparent; /* Remove input background */
-}
-
-label {
-  color: #e8be8c;
-  text-align: left;
+  background: transparent;
 }
 
 /* Set max-width for the textarea to prevent breaking */
 textarea {
   width: 100%;
-  max-width: 100%; /* Adjust max-width as needed */
+  max-width: 100%;
   padding: 8px;
   box-sizing: border-box;
   border: 1px solid #464545;
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical;
 }
 
 button {
@@ -143,9 +144,31 @@ button {
   padding: 10px;
   border: none;
   cursor: pointer;
+  width: 100%; /* Take full width on mobile */
 }
 
 button:hover {
   background-color: #d18b54;
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row; /* Switch back to row layout for larger screens */
+  }
+
+  .map {
+    height: auto;
+    width: 48%;
+    margin-bottom: 0;
+    margin-top: 0%;
+    margin-left: 5%;
+  }
+
+  .contactform {
+    width: 48%;
+    margin-right: 5%;
+  }
+}
 </style>
+
