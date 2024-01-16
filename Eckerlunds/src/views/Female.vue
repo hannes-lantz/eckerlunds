@@ -20,6 +20,15 @@
           <img src="@/assets/brands/female/stenströms-logo.png" alt="" />
           <img src="@/assets/brands/female/superdry-ogo.png" alt="" />
         </div>
+        <div class="brands">
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+        </div>
       </div>
 
       <div class="carousel-inner reverse">
@@ -41,6 +50,15 @@
           <img src="@/assets/brands/female/stenströms-logo.png" alt="" />
           <img src="@/assets/brands/female/superdry-ogo.png" alt="" />
         </div>
+        <div class="brands">
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
+        </div>
       </div>
 
       <div class="carousel-inner">
@@ -61,6 +79,15 @@
           <img src="@/assets/brands/female/lee-logo.png" alt="" />
           <img src="@/assets/brands/female/stenströms-logo.png" alt="" />
           <img src="@/assets/brands/female/superdry-ogo.png" alt="" />
+        </div>
+        <div class="brands">
+          <img src="@/assets/brands/male/lee-logo.png" alt="" />
+          <img src="@/assets/brands/male/stenströms-logo.png" alt="" />
+          <img src="@/assets/brands/male/superdry-ogo.png" alt="" />
+          <img src="@/assets/brands/male/barbour-logo.png" alt="" />
+          <img src="@/assets/brands/male/boomerang-logo.png" alt="" />
+          <img src="@/assets/brands/male/diesel-logo.png" alt="" />
+          <img src="@/assets/brands/male/lacoste-logo.png" alt="" />
         </div>
       </div>
     </div>

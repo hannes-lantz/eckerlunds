@@ -8,6 +8,8 @@ import History from './views/History.vue'
 import Male from './views/Male.vue'
 import Female from './views/Female.vue'
 import Contact from './views/Contact.vue'
+import OpeningHours from './components/OpeningHours.vue'
+import ContactInfo from './components/ContactInfo.vue'
 
 export default {
   components: {
@@ -15,7 +17,9 @@ export default {
     History,
     Male,
     Female,
-    Contact
+    Contact,
+    OpeningHours,
+    ContactInfo
   }
 }
 </script>
@@ -47,22 +51,16 @@ export default {
           </router-link>
         </div>
         <br />
-        <p><strong>Öppettider</strong></p>
-        <p>vardagar 09:00-18:00</p>
-        <p>lördagar 09:00-14:00</p>
-        <p>(lördagar Juni - Augusti 09:00-13:00)</p>
+        <OpeningHours />
         <br />
         <p>Ring gärna till butiken under öppettid, för snabbast svar.</p>
         <br />
-        <p>Malmövägen 1<br />273 35 Tomelilla<br />Sverige</p>
       </div>
       <div class="contact-us">
         <router-link to="/contact" class="contact-link">
           <h3>Kontakta oss</h3>
         </router-link>
-        <p><strong>Kontakt</strong></p>
-        <p>Tel: 0417 - 10321</p>
-        <p>E-post: info@eckerlunds.se</p>
+        <ContactInfo />
       </div>
       <div class="social-media">
         <h3>Sociala medier</h3>
@@ -107,7 +105,7 @@ export default {
 }
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   margin-top: 2rem;
 }

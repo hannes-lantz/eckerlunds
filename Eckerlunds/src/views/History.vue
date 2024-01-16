@@ -62,7 +62,7 @@ h1 {
 }
 
 .img {
-  margin: 35% 0 0 30%;
+  margin: 35% 0 0 20%;
   max-width: 100%;
 }
 
@@ -79,5 +79,9 @@ h1 {
   font-size: 12px;
   color: black;
   max-width: 100%; /* Ensure text doesn't exceed its container's width */
+}
+
+.text p {
+  margin-top: 2%;
 }
 </style>
