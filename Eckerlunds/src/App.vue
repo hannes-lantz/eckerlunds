@@ -10,6 +10,7 @@ import Female from './views/Female.vue'
 import Contact from './views/Contact.vue'
 import OpeningHours from './components/OpeningHours.vue'
 import ContactInfo from './components/ContactInfo.vue'
+import { RiFacebookBoxFill } from "oh-vue-icons/icons";
 
 export default {
   components: {
@@ -64,12 +65,14 @@ export default {
       </div>
       <div class="social-media">
         <h3>Sociala medier</h3>
+        <div class="social-media-icons">
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-facebook"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="white" d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6c44.2 0 82.1 3.3 93.2 4.8v107.9z"/></svg>
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-twitter"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024"><path fill="white" d="M603.575 510.854c0-54.044-44.172-98.02-98.463-98.02c-54.285 0-98.455 43.977-98.455 98.02c0 54.058 44.17 98.026 98.455 98.026c54.291 0 98.463-43.968 98.463-98.026M749.855.602H250.142C112.465.602.456 112.124.456 249.199v69.266h367.413c38.769-27.496 86.118-43.739 137.243-43.739c51.124 0 98.48 16.243 137.251 43.739H999.54v-69.266C999.54 112.123 887.531.602 749.855.602m101.12 236.435c0 15.191-12.48 27.622-27.743 27.622h-85.72c-15.261 0-27.743-12.431-27.743-27.622v-85.352c0-15.19 12.481-27.622 27.743-27.622h85.72c15.262 0 27.743 12.43 27.743 27.622zM742.287 510.854c0 130.215-106.402 236.133-237.176 236.133c-130.778 0-237.17-105.918-237.17-236.133c0-35.848 8.11-69.845 22.532-100.318H.456v340.263c0 137.085 112.009 248.597 249.686 248.597h499.714c137.676 0 249.685-111.513 249.685-248.597V410.536H719.755c14.422 30.473 22.532 64.47 22.532 100.318"/></svg>
         </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -138,6 +141,18 @@ nav a.router-link-exact-active {
   padding: 0;
 }
 
+.social-media-icons {
+    width: 25%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.social-media-icons a {
+    width: 100%;
+    height: 100%;
+  }
+
 .contact-link {
   color: #fff;
   text-decoration: none;
@@ -187,6 +202,10 @@ nav a.router-link-exact-active:hover {
     width: 100vw;
   }
 
+  .footer h1, h2, h3, strong{
+    font-weight: bold;
+  }
+
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -199,6 +218,11 @@ nav a.router-link-exact-active:hover {
     max-width: 300px;
     margin: 10px;
     padding: 0;
+  }
+
+  .social-media-icons a svg {
+    width: 50%;
+    height: 100%;
   }
 
   .contact-link {
